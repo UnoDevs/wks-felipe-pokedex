@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre o <%=name%>
+    </title>
+</head>
+
+<body>
+    <h1>
+        <%=name%> | <%=id%>
+    </h1>
+    <img src="<%=sprites.front_default%>" style="width: 135px;" alt="">
+    <hr>
+    <h3>Pokemon Info</h3>
+    <ul>
+        <li><b>Weight:</b>
+            <%=weight%>
+        </li>
+        <li><b>Height:</b>
+            <%=height%>
+        </li>
+        <li><b>XP Base:</b>
+            <%=base_experience%>
+        </li>
+        <details>
+            <summary><b>Types:</b></summary>
+            <ul>
+                <% types.forEach( element=> {%>
+                    <li>
+                        <%=element.type.name%>
+                    </li>
+                    <% })%>
+            </ul>
+        </details>
+    </ul>
+    <hr>
+    <details>
+        <summary><b>Abilities</b></summary>
+        <ul>
+            <% abilities.forEach( abili=> {%>
+                <li>
+                    <%=abili.ability.name%>
+                </li>
+                <% })%>
+        </ul>
+    </details>
+    <hr>
+    <details>
+        <summary><b>Moves</b></summary>
+        <ul>
+            <% moves.forEach( element=> {%>
+                <li>
+                    <%=element.move.name%>
+                </li>
+                <% })%>
+        </ul>
+    </details>
+</body>
+
+</html>
