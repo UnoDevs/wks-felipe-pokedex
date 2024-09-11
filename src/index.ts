@@ -27,5 +27,5 @@ app.get('/pokedata/:id',function(request:Request,response:Response){
 })
 
 app.listen(port, function(){
-    console.log("Server is Running")
+    console.log(`Server is Running in localhost:${port}`)
 });
